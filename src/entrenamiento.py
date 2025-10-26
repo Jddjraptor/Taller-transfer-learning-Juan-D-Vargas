@@ -131,4 +131,5 @@ resnet50_model = build_model("resnet50", NUM_CLASSES)
 optimizer_resnet = optim.Adam(filter(lambda p: p.requires_grad, resnet50_model.parameters()), lr=LR)
 
 train_model(resnet50_model, optimizer_resnet, train_loader, test_loader,
+
             epochs=EPOCHS, save_path="modelos/resnet50_cifar10.pth")
